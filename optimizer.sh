@@ -1,0 +1,14 @@
+python optimizer.py \
+    --iter 750\
+    --device cuda\
+    --device_num 0\
+    --sample_freq 250\
+    --warpFeat\
+    --warpRes\
+    --warpMv\
+    --cycle\
+    --content_style_wt 0.4 \
+    --content_root ./sim_real_inputs/2_19_24_full_sim_run/vimba_front_left_center_ONE_THIRD \
+    --style_root ./sim_real_inputs/2_19_24_full_sim_run/real \
+    --save_root ./results/results_2_19_24_full_sim_run_CSW_04 \
+    --fileType jpg\
