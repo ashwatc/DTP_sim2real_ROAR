@@ -257,10 +257,11 @@ if __name__ == "__main__":
                         result = ( np.clip(( dec_result[0].permute(1,2,0).clone().detach().cpu().numpy()), 0.0, 1.0)*255.0).astype('uint8')[::,::,::-1]
 
                     """ change the form """
-                    content_save  =  (cv2.resize(content_256, (256,256))).astype('uint8')[::,::,::-1]
-                    style_save    =  (cv2.resize(style_256, (256,256))).astype('uint8')[::,::,::-1]
+                    content_save  =  (cv2.resize(content_256, (512,384))).astype('uint8')[::,::,::-1]
+                    style_save    =  (cv2.resize(style_256, (512,384))).astype('uint8')[::,::,::-1]
+                    result        =  (cv2.resize(result, (512,384))).astype('uint8')
                     bundle_result =  np.stack( (content_save, style_save, result), axis=1 )
-                    bundle_result = bundle_result.reshape((256, 256*3, 3))
+                    bundle_result = bundle_result.reshape((384, 512*3, 3))
 
 
                     """ save the result """
