@@ -31,8 +31,8 @@ def copy_png_files(source_folder, destination_folder):
 
 
 
-ROOT_DIR = "/home/ashwatc/Desktop/sim2real/Deep_Translation_Prior/results/results_TEMPORARY_TESTS_CSW_08"
-OUTPUT_DIR = "/home/ashwatc/Desktop/sim2real/Deep_Translation_Prior/results_by_sim_img/" + ROOT_DIR.split("/")[-1] + "_simdir"
+ROOT_DIR = "/home/ashwatc/Desktop/sim2real/DTP_sim2real_ROAR/results/for_the_paper_results/CSW_08_results"
+OUTPUT_DIR = "/home/ashwatc/Desktop/sim2real/DTP_sim2real_ROAR/results_by_sim_img/for_the_paper/" + ROOT_DIR.split("/")[-1] + "_simdir"
 for folder in os.listdir(ROOT_DIR):
     folder = os.path.join(ROOT_DIR, folder)
     if os.path.isdir(folder):
